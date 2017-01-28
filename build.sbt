@@ -33,6 +33,13 @@ lazy val scalaOAuth2ProviderSettings =
           <url>https://github.com/nulab/play2-oauth2-provider</url>
           <connection>scm:git:git@github.com:nulab/play2-oauth2-provider.git</connection>
         </scm>
+        <developers>
+          <developer>
+            <id>tsuyoshizawa</id>
+            <name>Tsuyoshi Yoshizawa</name>
+            <url>https://github.com/tsuyoshizawa</url>
+          </developer>
+        </developers>
     )
 
 lazy val root = Project(
@@ -43,7 +50,7 @@ lazy val root = Project(
     description := "Support scala-oauth2-core library on Playframework Scala",
     version := "1.2.1-SNAPSHOT",
     libraryDependencies ++= Seq(
-      "com.nulab-inc" % "scala-oauth2-core_2.11" % "1.2.0",
+      "com.nulab-inc" %% "scala-oauth2-core" % "1.3.0" % "provided",
       "com.typesafe.play" %% "play" % playVersion % "provided",
       "com.typesafe.play" %% "play-test" % playVersion % "test"
     ) ++ commonDependenciesInTestScope
